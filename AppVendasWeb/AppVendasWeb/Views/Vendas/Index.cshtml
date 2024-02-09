@@ -51,21 +51,25 @@
                         @Html.DisplayFor(modelItem => item.Cliente.CPF)
                     </td>
                     <td class="text-end">
+
+
+                    <td>
+                        <a class="text-decoration-none link-light btn btn-outline-light" asp-controller="ItensDaVenda" asp-action="Create" asp-route-id="@item.ClienteId">
+                            <svg class="mx-2" bootstrap-icon="PlusLg" width="15" height="15" aria-label="Adicionar"></svg>
+                            Novo Item
+                        </a>
+                    </td>
+
+
                     <td>
                         <a class="btn btn-outline-info" asp-action="Edit" asp-route-id="@item.ClienteId">
-                            <svg class="me-2" bootstrap-icon="Pencil" width="15" height="15" aria-label="Alarms"></svg>
+                            <svg class="mx-2" bootstrap-icon="Pencil" width="15" height="15" aria-label="Alarms"></svg>
                             Edit
                         </a>
                     </td>
                     <td>
-                        <a class="btn btn-outline-light" asp-action="Details" asp-route-id="@item.ClienteId">
-                            <svg class="me-2" bootstrap-icon="CardList" width="15" height="15" aria-label="Alarms"></svg>
-                            Detalhes
-                        </a>
-                    </td>
-                    <td>
                         <a class="btn btn-outline-danger" asp-action="Delete" asp-route-id="@item.ClienteId">
-                            <svg class="me-2" bootstrap-icon="Trash" width="15" height="15" aria-label="Alarms"></svg>
+                            <svg class="mx-2" bootstrap-icon="Trash" width="15" height="15" aria-label="Alarms"></svg>
                             Excluir
                         </a>
 
