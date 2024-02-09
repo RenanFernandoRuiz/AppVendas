@@ -1,10 +1,10 @@
-﻿@model IEnumerable<AppVendasWeb.Models.Cliente>
+﻿@model IEnumerable<AppVendasWeb.Models.ItemDaVenda>
 
 @{
-    ViewData["Title"] = "Cadastro de Clientes";
+    ViewData["Title"] = "Itens da Venda";
 }
 
-<h1 class="display-5 text-light my-5">Cadastro de clientes</h1>
+<h1 class="display-5 text-light my-5">Itens da Venda</h1>
 
 <p>
     <a asp-action="Create" class="btn btn-lg btn-outline-success d-inline-flex align-items-center">
@@ -17,32 +17,21 @@
         <thead>
             <tr>
                 <th>
-                    @Html.DisplayNameFor(model => model.ClienteNome)
+                    @Html.DisplayNameFor(model => model.Produto)
                 </th>
                 <th>
-                    @Html.DisplayNameFor(model => model.CPF)
+                    @Html.DisplayNameFor(model => model.Venda)
                 </th>
                 <th>
-                    @Html.DisplayNameFor(model => model.Email)
+                    @Html.DisplayNameFor(model => model.Quantidade)
                 </th>
                 <th>
-                    @Html.DisplayNameFor(model => model.DataNascimento)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Celular)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.DataCadastro)
-                </th>
-                <th>
-                    Ativo
+                    @Html.DisplayNameFor(model => model.Valor)
                 </th>
                 <th></th>
                 <th></th>
                 <th></th>
                 <th></th>
-
-
             </tr>
         </thead>
         <tbody>
@@ -50,41 +39,32 @@
             {
                 <tr>
                     <td>
-                        @Html.DisplayFor(modelItem => item.ClienteNome)
+                        @Html.DisplayFor(modelItem => item.Produto.Descricao)
                     </td>
                     <td>
-                        @Html.DisplayFor(modelItem => item.CPF)
+                        @Html.DisplayFor(modelItem => item.Venda.VendaId)
                     </td>
                     <td>
-                        @Html.DisplayFor(modelItem => item.Email)
+                        @Html.DisplayFor(modelItem => item.Quantidade)
                     </td>
                     <td>
-                        @Html.DisplayFor(modelItem => item.DataNascimento)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Celular)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.DataCadastro)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.CadastroAtivo)
+                        @Html.DisplayFor(modelItem => item.Valor)
                     </td>
                     <td class="text-end">
                     <td>
-                        <a class="btn btn-outline-info" asp-action="Edit" asp-route-id="@item.ClienteId">
+                        <a class="btn btn-outline-info" asp-action="Edit" asp-route-id="@item.ItemDaVendaID">
                             <svg class="me-2" bootstrap-icon="Pencil" width="15" height="15" aria-label="Alarms"></svg>
                             Edit
                         </a>
                     </td>
                     <td>
-                        <a class="btn btn-outline-light" asp-action="Details" asp-route-id="@item.ClienteId">
+                        <a class="btn btn-outline-light" asp-action="Details" asp-route-id="@item.ItemDaVendaID">
                             <svg class="me-2" bootstrap-icon="CardList" width="15" height="15" aria-label="Alarms"></svg>
                             Detalhes
                         </a>
                     </td>
                     <td>
-                        <a class="btn btn-outline-danger" asp-action="Delete" asp-route-id="@item.ClienteId">
+                        <a class="btn btn-outline-danger" asp-action="Delete" asp-route-id="@item.ItemDaVendaID">
                             <svg class="me-2" bootstrap-icon="Trash" width="15" height="15" aria-label="Alarms"></svg>
                             Excluir
                         </a>

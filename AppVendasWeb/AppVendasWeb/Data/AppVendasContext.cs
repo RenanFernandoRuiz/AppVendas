@@ -12,11 +12,18 @@ namespace AppVendasWeb.Data
         public DbSet<Categoria> Categorias { get; set; }
         public DbSet<Produto> Produtos { get; set; }
 
+        public DbSet<Venda> Vendas { get; set; }
+
+        public DbSet<ItemDaVenda> ItemDaVenda { get; set; }
+
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Cliente>().ToTable("Cliente");
             modelBuilder.Entity<Categoria>().ToTable("Categoria");
             modelBuilder.Entity<Produto>().ToTable("Produto");
+            modelBuilder.Entity<Venda>().ToTable("Venda");
+            modelBuilder.Entity<ItemDaVenda>().ToTable("ItemDaVenda");
         }
     }
 }

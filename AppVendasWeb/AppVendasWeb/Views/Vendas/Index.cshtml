@@ -1,10 +1,10 @@
-﻿@model IEnumerable<AppVendasWeb.Models.Cliente>
+﻿@model IEnumerable<AppVendasWeb.Models.Venda>
 
 @{
-    ViewData["Title"] = "Cadastro de Clientes";
+    ViewData["Title"] = "Vendas";
 }
 
-<h1 class="display-5 text-light my-5">Cadastro de clientes</h1>
+<h1 class="display-5 text-light my-5">Vendas</h1>
 
 <p>
     <a asp-action="Create" class="btn btn-lg btn-outline-success d-inline-flex align-items-center">
@@ -17,32 +17,21 @@
         <thead>
             <tr>
                 <th>
-                    @Html.DisplayNameFor(model => model.ClienteNome)
+                    @Html.DisplayNameFor(model => model.DataVenda)
                 </th>
                 <th>
-                    @Html.DisplayNameFor(model => model.CPF)
+                    @Html.DisplayNameFor(model => model.ValorTotal)
                 </th>
                 <th>
-                    @Html.DisplayNameFor(model => model.Email)
+                    @Html.DisplayNameFor(model => model.NotaFiscal)
                 </th>
                 <th>
-                    @Html.DisplayNameFor(model => model.DataNascimento)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Celular)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.DataCadastro)
-                </th>
-                <th>
-                    Ativo
+                    @Html.DisplayNameFor(model => model.Cliente)
                 </th>
                 <th></th>
                 <th></th>
                 <th></th>
                 <th></th>
-
-
             </tr>
         </thead>
         <tbody>
@@ -50,25 +39,16 @@
             {
                 <tr>
                     <td>
-                        @Html.DisplayFor(modelItem => item.ClienteNome)
+                        @Html.DisplayFor(modelItem => item.DataVenda)
                     </td>
                     <td>
-                        @Html.DisplayFor(modelItem => item.CPF)
+                        @Html.DisplayFor(modelItem => item.ValorTotal)
                     </td>
                     <td>
-                        @Html.DisplayFor(modelItem => item.Email)
+                        @Html.DisplayFor(modelItem => item.NotaFiscal)
                     </td>
                     <td>
-                        @Html.DisplayFor(modelItem => item.DataNascimento)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Celular)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.DataCadastro)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.CadastroAtivo)
+                        @Html.DisplayFor(modelItem => item.Cliente.CPF)
                     </td>
                     <td class="text-end">
                     <td>

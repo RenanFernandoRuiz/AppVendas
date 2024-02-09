@@ -25,6 +25,8 @@ namespace AppVendasWeb.Models
 
         public DateOnly DataNascimento { get; set; }
 
+        [StringLength(15, ErrorMessage = "O campo Celular deve ter no máximo 15 caracteres ")]
+
         public string? Celular { get; set; }
 
         [Display(Name = "Data de Cadastro")]
