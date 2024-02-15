@@ -15,7 +15,7 @@ namespace AppVendasWeb.Data
         public DbSet<Venda> Vendas { get; set; }
 
         public DbSet<ItemDaVenda> ItemDaVenda { get; set; }
-
+        public IEnumerable<object> Cliente { get; internal set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

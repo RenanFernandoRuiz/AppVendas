@@ -26,6 +26,8 @@ namespace AppVendasWeb.Controllers
             return View(await appVendasContext.ToListAsync());
         }
 
+        
+
         // GET: Produtos/Details/5
         public async Task<IActionResult> Details(Guid? id)
         {
